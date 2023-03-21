@@ -43,6 +43,15 @@ public:
 	BillboardRR *billboard;
 	Camara *camara;
 	ModeloRR* model;
+	ModeloRR* arbol1;
+	ModeloRR* tanque1;
+	ModeloRR* tanque1Track;
+	ModeloRR* casa1;
+	ModeloRR* casa2;
+	ModeloRR* casa2Ventanas;
+	ModeloRR* casa2Techo;
+	ModeloRR* casa3;
+	ModeloRR* bala;
 	
 	float izqder;
 	float arriaba;
@@ -77,9 +86,13 @@ public:
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.png");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
-
-		
-
+		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", 0, 0);
+		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", 0, 0);
+		casa1 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa1/casa1.obj", L"Assets/casa1/cottage_diffuse.png", L"Assets/casa1/cottage_normal.png", -55, 0);
+		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/construc.obj", L"Assets/casa2/construc_color.jpg", L"Assets/casa2/construc_color.jpg", -80, 30);
+		casa2Ventanas = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/ventanas.obj", L"Assets/casa2/ventanas_color.jpg", L"Assets/casa2/ventanas_color.jpg", -80, 30);
+		casa2Techo = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/madera.obj", L"Assets/casa2/madera_color.jpg", L"Assets/casa2/madera_color.jpg", -80, 30);
+		bala = new ModeloRR(d3dDevice, d3dContext, "Assets/bala/bala.obj", L"Assets/bala/bala_color.png", L"Assets/bala/bala_spec.png", 0, 0);
 		
 	}
 
@@ -275,6 +288,13 @@ public:
 
 		//TurnOffAlphaBlending();
 		model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		tanque1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-5, camara->posCam, 10.0f, 0, 'A', 1);
+		tanque1Track->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-5, camara->posCam, 10.0f, 0, 'A', 1);
+		casa1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)+5, camara->posCam, 10.0f, 0, 'A', 1);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)+2, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Ventanas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 2, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Techo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 2, camara->posCam, 10.0f, 0, 'A', 5);
+		bala->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-3, camara->posCam, 10.0f, 0, 'A', 10);
 
 		swapChain->Present( 1, 0 );
 	}
