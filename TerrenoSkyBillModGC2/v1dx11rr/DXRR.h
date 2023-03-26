@@ -11,12 +11,12 @@
 #include "ModeloRR.h"
 #include "XACT3Util.h"
 
-class DXRR{	
+class DXRR {
 
 private:
 	int ancho;
 	int alto;
-public:	
+public:
 	HINSTANCE hInstance;
 	HWND hWnd;
 
@@ -34,25 +34,29 @@ public:
 	ID3D11DepthStencilState* depthStencilState;
 	ID3D11DepthStencilState* depthStencilDisabledState;
 
-	ID3D11BlendState *alphaBlendState, *commonBlendState;
+	ID3D11BlendState* alphaBlendState, * commonBlendState;
 
 	int frameBillboard;
 
-	TerrenoRR *terreno;
-	SkyDome *skydome;
-	BillboardRR *billboard;
-	Camara *camara;
+	TerrenoRR* terreno;
+	SkyDome* skydome;
+	BillboardRR* billboard;
+	Camara* camara;
 	ModeloRR* model;
 	ModeloRR* arbol1;
 	ModeloRR* tanque1;
 	ModeloRR* tanque1Track;
+	ModeloRR* tanque2;
 	ModeloRR* casa1;
 	ModeloRR* casa2;
 	ModeloRR* casa2Ventanas;
 	ModeloRR* casa2Techo;
 	ModeloRR* casa3;
 	ModeloRR* bala;
-	
+	ModeloRR* tronco;
+	ModeloRR* hojas;
+	ModeloRR* medkit;
+
 	float izqder;
 	float arriaba;
 	float vel;
@@ -64,8 +68,8 @@ public:
 
 	XACTINDEX cueIndex;
 	CXACT3Util m_XACT3;
-	
-    DXRR(HWND hWnd, int Ancho, int Alto)
+
+	DXRR(HWND hWnd, int Ancho, int Alto)
 	{
 		breakpoint = false;
 		frameBillboard = 0;
@@ -81,19 +85,23 @@ public:
 		izqder = 0;
 		arriaba = 0;
 		billCargaFuego();
-		camara = new Camara(D3DXVECTOR3(0,80,6), D3DXVECTOR3(0,80,0), D3DXVECTOR3(0,1,0), Ancho, Alto);
+		camara = new Camara(D3DXVECTOR3(0, 80, 6), D3DXVECTOR3(0, 80, 0), D3DXVECTOR3(0, 1, 0), Ancho, Alto);
 		terreno = new TerrenoRR(300, 300, d3dDevice, d3dContext);
-		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.png");
-		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
+		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.jpg");
+		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png", L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
-		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", 0, 0);
-		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", 0, 0);
+		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", 10, 0);
+		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", 10, 0);
 		casa1 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa1/casa1.obj", L"Assets/casa1/cottage_diffuse.png", L"Assets/casa1/cottage_normal.png", -55, 0);
 		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/construc.obj", L"Assets/casa2/construc_color.jpg", L"Assets/casa2/construc_color.jpg", -80, 30);
 		casa2Ventanas = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/ventanas.obj", L"Assets/casa2/ventanas_color.jpg", L"Assets/casa2/ventanas_color.jpg", -80, 30);
 		casa2Techo = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/madera.obj", L"Assets/casa2/madera_color.jpg", L"Assets/casa2/madera_color.jpg", -80, 30);
 		bala = new ModeloRR(d3dDevice, d3dContext, "Assets/bala/bala.obj", L"Assets/bala/bala_color.png", L"Assets/bala/bala_spec.png", 0, 0);
-		
+		hojas = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", 30, 0);
+		tronco = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", 30, 0);
+		medkit = new ModeloRR(d3dDevice, d3dContext, "Assets/medkit/medkit.obj", L"Assets/medkit/medkit.jpg", L"Assets/medkit/medkit-spec.jpg", 0, 20);
+		tanque2 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque2/tanque2.obj", L"Assets/tanque2/tanque2.jpg", L"Assets/tanque2/tanque2-spec.jpg", 50, 50);
+
 	}
 
 	~DXRR()
@@ -101,7 +109,7 @@ public:
 		LiberaD3D();
 		m_XACT3.Terminate();
 	}
-	
+
 	bool IniciaD3D(HWND hWnd)
 	{
 		this->hInstance = hInstance;
@@ -116,14 +124,14 @@ public:
 		//Las formas en como la pc puede ejecutar el DX11, la mas rapida es D3D_DRIVER_TYPE_HARDWARE pero solo se puede usar cuando lo soporte el hardware
 		//otra opcion es D3D_DRIVER_TYPE_WARP que emula el DX11 en los equipos que no lo soportan
 		//la opcion menos recomendada es D3D_DRIVER_TYPE_SOFTWARE, es la mas lenta y solo es util cuando se libera una version de DX que no sea soportada por hardware
-		D3D_DRIVER_TYPE driverTypes[]=
+		D3D_DRIVER_TYPE driverTypes[] =
 		{
 			D3D_DRIVER_TYPE_HARDWARE, D3D_DRIVER_TYPE_WARP, D3D_DRIVER_TYPE_SOFTWARE
 		};
 		unsigned int totalDriverTypes = ARRAYSIZE(driverTypes);
 
 		//La version de DX que utilizara, en este caso el DX11
-		D3D_FEATURE_LEVEL featureLevels[]=
+		D3D_FEATURE_LEVEL featureLevels[] =
 		{
 			D3D_FEATURE_LEVEL_11_0, D3D_FEATURE_LEVEL_10_1, D3D_FEATURE_LEVEL_10_0
 		};
@@ -145,40 +153,40 @@ public:
 
 		HRESULT result;
 		unsigned int driver = 0, creationFlags = 0;
-		for(driver = 0; driver<totalDriverTypes; driver++)
+		for (driver = 0; driver < totalDriverTypes; driver++)
 		{
 			result = D3D11CreateDeviceAndSwapChain(0, driverTypes[driver], 0,
-				creationFlags, featureLevels, totalFeaturesLevels, 
+				creationFlags, featureLevels, totalFeaturesLevels,
 				D3D11_SDK_VERSION, &swapChainDesc, &swapChain,
 				&d3dDevice, &featureLevel, &d3dContext);
 
-			if(SUCCEEDED(result))
+			if (SUCCEEDED(result))
 			{
 				driverType = driverTypes[driver];
 				break;
 			}
 		}
 
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 
 			//Error al crear el Direct3D device
 			return false;
 		}
-		
+
 		ID3D11Texture2D* backBufferTexture;
 		result = swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&backBufferTexture);
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			//"Error al crear el swapChainBuffer
 			return false;
 		}
 
 		result = d3dDevice->CreateRenderTargetView(backBufferTexture, 0, &backBufferTarget);
-		if(backBufferTexture)
+		if (backBufferTexture)
 			backBufferTexture->Release();
 
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			//Error al crear el renderTargetView
 			return false;
@@ -208,9 +216,9 @@ public:
 		depthTexDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
 		depthTexDesc.CPUAccessFlags = 0;
 		depthTexDesc.MiscFlags = 0;
-		
+
 		result = d3dDevice->CreateTexture2D(&depthTexDesc, NULL, &depthTexture);
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			MessageBox(0, L"Error", L"Error al crear la DepthTexture", MB_OK);
 			return false;
@@ -223,7 +231,7 @@ public:
 		descDSV.Texture2D.MipSlice = 0;
 
 		result = d3dDevice->CreateDepthStencilView(depthTexture, &descDSV, &depthStencilView);
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			MessageBox(0, L"Error", L"Error al crear el depth stencil target view", MB_OK);
 			return false;
@@ -231,23 +239,23 @@ public:
 
 		d3dContext->OMSetRenderTargets(1, &backBufferTarget, depthStencilView);
 
-		return true;			
-		
+		return true;
+
 	}
 
 	void LiberaD3D(void)
 	{
-		if(depthTexture)
+		if (depthTexture)
 			depthTexture->Release();
-		if(depthStencilView)
+		if (depthStencilView)
 			depthStencilView->Release();
-		if(backBufferTarget)
+		if (backBufferTarget)
 			backBufferTarget->Release();
-		if(swapChain)
+		if (swapChain)
 			swapChain->Release();
-		if(d3dContext)
+		if (d3dContext)
 			d3dContext->Release();
-		if(d3dDevice)
+		if (d3dDevice)
 			d3dDevice->Release();
 
 		depthTexture = 0;
@@ -257,7 +265,7 @@ public:
 		swapChain = 0;
 		backBufferTarget = 0;
 	}
-	
+
 	void Render(void)
 	{
 		float sphere[3] = { 0,0,0 };
@@ -266,13 +274,13 @@ public:
 		angle += 0.005;
 		if (angle >= 360) angle = 0.0f;
 		bool collide = false;
-		if( d3dContext == 0 )
+		if (d3dContext == 0)
 			return;
 
 		float clearColor[4] = { 0, 0, 0, 1.0f };
-		d3dContext->ClearRenderTargetView( backBufferTarget, clearColor );
-		d3dContext->ClearDepthStencilView( depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
-		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5 ;
+		d3dContext->ClearRenderTargetView(backBufferTarget, clearColor);
+		d3dContext->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
+		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5;
 		camara->UpdateCam(vel, arriaba, izqder);
 		skydome->Update(camara->vista, camara->proyeccion);
 
@@ -287,16 +295,20 @@ public:
 			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
 
 		//TurnOffAlphaBlending();
-		model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
-		tanque1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-5, camara->posCam, 10.0f, 0, 'A', 1);
-		tanque1Track->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-5, camara->posCam, 10.0f, 0, 'A', 1);
-		casa1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)+5, camara->posCam, 10.0f, 0, 'A', 1);
-		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)+2, camara->posCam, 10.0f, 0, 'A', 5);
-		casa2Ventanas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 2, camara->posCam, 10.0f, 0, 'A', 5);
-		casa2Techo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 2, camara->posCam, 10.0f, 0, 'A', 5);
-		bala->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-3, camara->posCam, 10.0f, 0, 'A', 10);
+		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		tanque1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3);
+		tanque1Track->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3);
+		casa1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 1);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Ventanas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Techo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
+		bala->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, 0, 'A', 70);
+		hojas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
+		tronco->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
+		medkit->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
+		tanque2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 3);
 
-		swapChain->Present( 1, 0 );
+		swapChain->Present(1, 0);
 	}
 
 	bool isPointInsideSphere(float* point, float* sphere) {
@@ -332,7 +344,7 @@ public:
 		descABSD.RenderTarget[0].RenderTargetWriteMask = 0x0f;
 
 		result = d3dDevice->CreateBlendState(&descABSD, &alphaBlendState);
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			MessageBox(0, L"Error", L"Error al crear el blend state", MB_OK);
 			return;
@@ -357,7 +369,7 @@ public:
 		HRESULT result;
 
 		result = d3dDevice->CreateBlendState(&descCBSD, &commonBlendState);
-		if(FAILED(result))
+		if (FAILED(result))
 		{
 			MessageBox(0, L"Error", L"Error al crear el blend state", MB_OK);
 			return;
@@ -373,7 +385,7 @@ public:
 		descDSD.DepthEnable = true;
 		descDSD.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
 		descDSD.DepthFunc = D3D11_COMPARISON_LESS;
-		descDSD.StencilEnable=true;
+		descDSD.StencilEnable = true;
 		descDSD.StencilReadMask = 0xFF;
 		descDSD.StencilWriteMask = 0xFF;
 		descDSD.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
@@ -386,7 +398,7 @@ public:
 		descDSD.BackFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
 
 		d3dDevice->CreateDepthStencilState(&descDSD, &depthStencilState);
-		
+
 		d3dContext->OMSetDepthStencilState(depthStencilState, 1);
 	}
 
@@ -397,7 +409,7 @@ public:
 		descDDSD.DepthEnable = false;
 		descDDSD.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
 		descDDSD.DepthFunc = D3D11_COMPARISON_LESS;
-		descDDSD.StencilEnable=true;
+		descDDSD.StencilEnable = true;
 		descDDSD.StencilReadMask = 0xFF;
 		descDDSD.StencilWriteMask = 0xFF;
 		descDDSD.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;

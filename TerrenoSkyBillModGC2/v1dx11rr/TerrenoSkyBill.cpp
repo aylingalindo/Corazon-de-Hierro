@@ -181,12 +181,12 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
             m_pKeyboardDevice->GetDeviceState(sizeof(keyboardData), (void*)&keyboardData);
 
             if (keyboardData[DIK_S] & 0x80) {
-                dxrr->vel = -5.f;
+                dxrr->vel = -3.f;
             }
 
 
             if (keyboardData[DIK_W] & 0x80) {
-                dxrr->vel = 5.f;
+                dxrr->vel = 3.f;
             }
 
             if (keyboardData[DIK_B] & 0x80) {
