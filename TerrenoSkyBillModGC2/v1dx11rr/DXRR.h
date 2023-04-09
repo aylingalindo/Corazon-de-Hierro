@@ -10,6 +10,8 @@
 #include "Billboard.h"
 #include "ModeloRR.h"
 #include "XACT3Util.h"
+#include <string>
+#include <stdio.h>
 
 class DXRR {
 
@@ -276,6 +278,9 @@ public:
 		bool collide = false;
 		if (d3dContext == 0)
 			return;
+
+		SetWindowTextA(hWnd, (LPCSTR)("X: " + std::to_string(camara->posCam.x)
+			+ "Y: " + std::to_string(camara->posCam.y) + "Z: " + std::to_string(camara->posCam.z)).c_str());
 
 		float clearColor[4] = { 0, 0, 0, 1.0f };
 		d3dContext->ClearRenderTargetView(backBufferTarget, clearColor);
