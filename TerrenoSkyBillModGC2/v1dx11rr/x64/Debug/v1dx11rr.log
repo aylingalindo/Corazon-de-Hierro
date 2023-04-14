@@ -132,23 +132,75 @@ C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl
 C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\ModeloRR.h(297,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
 C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\ModeloRR.h(297,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
 C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\ModeloRR.h(357,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(276,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(447,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(448,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(449,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(450,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(458,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(459,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(460,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(461,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(470,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(471,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(472,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(473,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(482,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(483,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(484,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(485,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(123,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(124,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(125,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(126,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(127,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(128,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(129,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(130,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(131,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(132,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(133,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(134,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(135,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(136,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(137,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(138,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(139,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(140,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(141,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(142,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(143,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(144,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(145,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(146,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(147,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(148,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(149,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(150,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(333,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(357,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(363,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(367,78): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(368,80): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(369,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(370,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(371,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(372,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(372,78): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(373,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(376,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(376,82): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(377,84): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(378,84): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(379,86): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(380,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(380,81): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(381,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(381,81): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(382,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(382,81): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(383,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(386,79): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(388,78): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(534,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(535,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(536,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(537,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(545,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(546,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(547,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(548,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(557,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(558,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(559,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(560,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(569,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(570,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(571,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(572,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\TerrenoSkyBill.cpp(146,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
 C:\Users\PC\OneDrive\Documentos\Tareas\GC2\Corazon-de-Hierro\TerrenoSkyBillModGC2\v1dx11rr\TerrenoSkyBill.cpp(213,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos

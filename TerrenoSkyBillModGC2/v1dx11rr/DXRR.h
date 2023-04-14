@@ -48,16 +48,44 @@ public:
 	ModeloRR* arbol1;
 	ModeloRR* tanque1;
 	ModeloRR* tanque1Track;
-	ModeloRR* tanque2;
+	ModeloRR* tanqueE1;
+	ModeloRR* tanqueE2;
+	ModeloRR* tanqueE3;
+	ModeloRR* pozo;
 	ModeloRR* casa1;
 	ModeloRR* casa2;
 	ModeloRR* casa2Ventanas;
 	ModeloRR* casa2Techo;
 	ModeloRR* casa3;
 	ModeloRR* bala;
-	ModeloRR* tronco;
-	ModeloRR* hojas;
 	ModeloRR* medkit;
+	ModeloRR* iglesia;
+	ModeloRR* paredDest;
+	ModeloRR* maderaDest;
+	ModeloRR* casaWood;
+	ModeloRR* rockFogata;
+	ModeloRR* woodFogata;
+	ModeloRR* cenizaFogata;
+	ModeloRR* senial1;
+	ModeloRR* senial2;
+	ModeloRR* senial3;
+	ModeloRR* senial4;
+	ModeloRR* caja;
+	ModeloRR* caja2;
+	ModeloRR* valla;
+	ModeloRR* maceta;
+	ModeloRR* saco;
+
+	ModeloRR* tronco1;
+	ModeloRR* hojas1;
+	ModeloRR* tronco2;
+	ModeloRR* hojas2;
+	ModeloRR* tronco3;
+	ModeloRR* hojas3;
+	ModeloRR* tronco4;
+	ModeloRR* hojas4;
+	ModeloRR* tronco5;
+	ModeloRR* hojas5;
 
 	float izqder;
 	float arriaba;
@@ -92,17 +120,46 @@ public:
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.jpg");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png", L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
-		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", 10, 0);
-		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", 10, 0);
-		casa1 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa1/casa1.obj", L"Assets/casa1/cottage_diffuse.png", L"Assets/casa1/cottage_normal.png", -55, 0);
-		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/construc.obj", L"Assets/casa2/construc_color.jpg", L"Assets/casa2/construc_color.jpg", -80, 30);
-		casa2Ventanas = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/ventanas.obj", L"Assets/casa2/ventanas_color.jpg", L"Assets/casa2/ventanas_color.jpg", -80, 30);
-		casa2Techo = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/madera.obj", L"Assets/casa2/madera_color.jpg", L"Assets/casa2/madera_color.jpg", -80, 30);
-		bala = new ModeloRR(d3dDevice, d3dContext, "Assets/bala/bala.obj", L"Assets/bala/bala_color.png", L"Assets/bala/bala_spec.png", 0, 0);
-		hojas = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", 30, 0);
-		tronco = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", 30, 0);
-		medkit = new ModeloRR(d3dDevice, d3dContext, "Assets/medkit/medkit.obj", L"Assets/medkit/medkit.jpg", L"Assets/medkit/medkit-spec.jpg", 0, 20);
-		tanque2 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque2/tanque2.obj", L"Assets/tanque2/tanque2.jpg", L"Assets/tanque2/tanque2-spec.jpg", 50, 50);
+		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", -8.69, -88.22);
+		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", -8.69, -88.22);
+		casa1 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa1/casa1.obj", L"Assets/casa1/cottage_diffuse.png", L"Assets/casa1/cottage_normal.png", 17.45, 74.87);
+		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/construc.obj", L"Assets/casa2/construc_color.jpg", L"Assets/casa2/construc_color.jpg", 26.21, -24.77);
+		casa2Ventanas = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/ventanas.obj", L"Assets/casa2/ventanas_color.jpg", L"Assets/casa2/ventanas_color.jpg", 26.21, -24.77);
+		casa2Techo = new ModeloRR(d3dDevice, d3dContext, "Assets/casa2/madera.obj", L"Assets/casa2/madera_color.jpg", L"Assets/casa2/madera_color.jpg", 26.21, -24.77);
+		bala = new ModeloRR(d3dDevice, d3dContext, "Assets/bala/bala.obj", L"Assets/bala/bala_color.png", L"Assets/bala/bala_spec.png", 115.49, 20.60);
+		medkit = new ModeloRR(d3dDevice, d3dContext, "Assets/medkit/medkit.obj", L"Assets/medkit/medkit.jpg", L"Assets/medkit/medkit-spec.jpg", -8.00, -110.96);
+		tanqueE1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque2/tanque2.obj", L"Assets/tanque2/tanque2.jpg", L"Assets/tanque2/tanque2-spec.jpg", -106.55, -31.74);
+		tanqueE2 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque2/tanque2.obj", L"Assets/tanque2/tanque2.jpg", L"Assets/tanque2/tanque2-spec.jpg", 56.61, 97.70);
+		tanqueE3 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque2/tanque2.obj", L"Assets/tanque2/tanque2.jpg", L"Assets/tanque2/tanque2-spec.jpg", 105.81, -61.89);
+		pozo = new ModeloRR(d3dDevice, d3dContext, "Assets/Pozo-agua/pozo.obj", L"Assets/Pozo-agua/pozo-base.png", L"Assets/Pozo-agua/pozo-Spec.png", -10.093, 20.87);
+		iglesia = new ModeloRR(d3dDevice, d3dContext, "Assets/Iglesia/Iglesia.obj", L"Assets/Iglesia/iglesia-base.png", L"Assets/Iglesia/iglesia-base.png", 32.89, -78.71);
+		paredDest = new ModeloRR(d3dDevice, d3dContext, "Assets/CasaDestruida/paredes.obj", L"Assets/CasaDestruida/casaDesB.jpg", L"Assets/CasaDestruida/casaDesB.jpg", -53.46, -10.65);
+		maderaDest = new ModeloRR(d3dDevice, d3dContext, "Assets/CasaDestruida/maredas.obj", L"Assets/CasaDestruida/casaDesM.jpg", L"Assets/CasaDestruida/casaDesM.jpg", -53.46, -10.65);
+		casaWood = new ModeloRR(d3dDevice, d3dContext, "Assets/CasaMadera/casaWood.obj", L"Assets/CasaMadera/houseW-base.png", L"Assets/CasaMadera/houseW-Spec.png", -83.79, -68.80);
+		rockFogata = new ModeloRR(d3dDevice, d3dContext, "Assets/Fogata/piedras.obj", L"Assets/Fogata/rocas-base.png", L"Assets/Fogata/rocas-Spec.png", 79.33, 73.75);
+		woodFogata = new ModeloRR(d3dDevice, d3dContext, "Assets/Fogata/maderas.obj", L"Assets/Fogata/maderas-base.png", L"Assets/Fogata/maderas-Spec.png", 79.33, 73.75);
+		cenizaFogata = new ModeloRR(d3dDevice, d3dContext, "Assets/Fogata/ceniza.obj", L"Assets/Fogata/ceniza-base.png", L"Assets/Fogata/ceniza-Spec.png", 79.33, 73.75);
+		senial1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Señal/sign.obj", L"Assets/Señal/sign-BaseColor.png", L"Assets/Señal/sign-Spec.png", 29.86, 0.22);
+		senial2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Señal/sign.obj", L"Assets/Señal/sign-BaseColor.png", L"Assets/Señal/sign-Spec.png", -1.184, 55.51);
+		senial3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Señal/sign.obj", L"Assets/Señal/sign-BaseColor.png", L"Assets/Señal/sign-Spec.png", -40.48, -14.09);
+		senial4 = new ModeloRR(d3dDevice, d3dContext, "Assets/Señal/sign.obj", L"Assets/Señal/sign-BaseColor.png", L"Assets/Señal/sign-Spec.png", -58.78, 45.49);
+		caja = new ModeloRR(d3dDevice, d3dContext, "Assets/Caja/caja.obj", L"Assets/Caja/BoxAlbedo.jpg", L"Assets/Caja/BoxSpec.jpg", 88.42, -73.05);
+		caja2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Caja/caja.obj", L"Assets/Caja/BoxAlbedo.jpg", L"Assets/Caja/BoxSpec.jpg", 77.21, -78.66);
+		valla = new ModeloRR(d3dDevice, d3dContext, "Assets/Fence/Fence.obj", L"Assets/Fence/fence-base.png", L"Assets/Fence/fence-Spec.png", -78.26, 32.99);
+		maceta = new ModeloRR(d3dDevice, d3dContext, "Assets/Maceta/Maceta.obj", L"Assets/Maceta/Pottery.jpg", L"Assets/Maceta/Pottery.jpg", -53.41, -105.38);
+		saco = new ModeloRR(d3dDevice, d3dContext, "Assets/Saco/Saco.obj", L"Assets/Saco/Burlap02.jpg", L"Assets/Saco/Burlap02.jpg", 81.18, -3.17);
+
+		//DESCOMENTAR DESPUES
+		/*hojas1 = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", -48.89, -40.00);
+		tronco1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", -48.89, -40.00);
+		hojas2 = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", -13.30, 79.84);
+		tronco2 = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", -13.30, 79.84);
+		hojas3 = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", 32.51, -43.49);
+		tronco3 = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", 32.51, -43.49);
+		hojas4 = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", 73.44, 51.81);
+		tronco4 = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", 73.44, 51.81);
+		hojas5 = new ModeloRR(d3dDevice, d3dContext, "Assets/hojas/hojas.obj", L"Assets/hojas/hojas.png", L"Assets/hojas/hojas-spec.png", 71.36, -21.62);
+		tronco5 = new ModeloRR(d3dDevice, d3dContext, "Assets/tronco/tronco.obj", L"Assets/tronco/tronco.png", L"Assets/tronco/tronco-Spec.png", 71.36, -21.62);*/
 
 	}
 
@@ -297,21 +354,51 @@ public:
 		terreno->Draw(camara->vista, camara->proyeccion);
 		//TurnOnAlphaBlending();
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
+			79.33, 73.75, 15, 2.5, uv1, uv2, uv3, uv4, frameBillboard);
 
 		//TurnOffAlphaBlending();
 		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
-		tanque1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3);
-		tanque1Track->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3);
-		casa1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 1);
-		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
-		casa2Ventanas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
-		casa2Techo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 3, camara->posCam, 10.0f, 0, 'A', 5);
-		bala->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, 0, 'A', 70);
-		hojas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
-		tronco->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
-		medkit->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 1);
-		tanque2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 2, camara->posCam, 10.0f, 0, 'A', 3);
+		tanque1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, 0, 'A', 3);
+		tanque1Track->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, 0, 'A', 3);
+		casa1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 200, 'Y', 0.9);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Ventanas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 5);
+		casa2Techo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 5);
+		bala->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1.5, camara->posCam, 10.0f, 0, 'A', 70);
+		medkit->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 2.5, camara->posCam, 10.0f, 80, 'X', 1);
+		tanqueE1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 2.4);
+		tanqueE2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 2.4);
+		tanqueE3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 2.4);
+		pozo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.5 , camara->posCam, 10.0f, 0, 'A', 2.3);
+		iglesia->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 2.3);
+		paredDest->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 7, camara->posCam, 10.0f, 0, 'A', 5);
+		maderaDest->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 7, camara->posCam, 10.0f, 0, 'A', 5);
+		casaWood->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.1, camara->posCam, 10.0f, 0, 'A', 1.9);
+		rockFogata->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 0.1, camara->posCam, 10.0f, 0, 'A', 2);
+		woodFogata->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 0.1, camara->posCam, 10.0f, 0, 'A', 2);
+		cenizaFogata->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 0.1, camara->posCam, 10.0f, 0, 'A', 2);
+		senial1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.1, camara->posCam, 10.0f, 0, 'A', 0.03);
+		senial2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.5, camara->posCam, 10.0f, 180, 'Y', 0.03);
+		senial3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.1, camara->posCam, 10.0f, 0, 'A', 0.03);
+		senial4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 1, camara->posCam, 10.0f, 90, 'Y', 0.03);
+		caja->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 90, 'Y', 2.5);
+		caja2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 60, 'Y', 2.5);
+		valla->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.5, camara->posCam, 10.0f, 15, 'Y', 5);
+		maceta->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) , camara->posCam, 10.0f, 0, 'A', 3.5);
+		saco->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 0.7, camara->posCam, 10.0f, 0, 'A', 1);
+
+		//DESCOMENTAR DESPUES
+		/*hojas1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) , camara->posCam, 10.0f, 0, 'A', 1);
+		tronco1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) , camara->posCam, 10.0f, 0, 'A', 1);
+		hojas2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) , camara->posCam, 10.0f, 0, 'A', 1);
+		tronco2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) , camara->posCam, 10.0f, 0, 'A', 1);
+		hojas3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		tronco3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		hojas4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		tronco4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		hojas5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
+		tronco5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);*/
+
 
 		swapChain->Present(1, 0);
 	}
