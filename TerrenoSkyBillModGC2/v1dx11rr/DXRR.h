@@ -43,6 +43,14 @@ public:
 	TerrenoRR* terreno;
 	SkyDome* skydome;
 	BillboardRR* billboard;
+	BillboardRR* pino; BillboardRR* pino2; BillboardRR* pino3;
+	BillboardRR* pino4; BillboardRR* pino5; BillboardRR* pino6;
+	BillboardRR* pino7; BillboardRR* pino8; BillboardRR* pino9;
+	BillboardRR* arbusto; BillboardRR* arbusto2; BillboardRR* roca;
+
+	BillboardRR* montania1; BillboardRR* montania2;
+	BillboardRR* montania3; BillboardRR* montania4;
+
 	Camara* camara;
 	ModeloRR* model;
 	ModeloRR* arbol1;
@@ -119,6 +127,22 @@ public:
 		terreno = new TerrenoRR(300, 300, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.jpg");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png", L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
+		pino = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, -79.69, 15, -42.74, 8);
+		pino2 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, -72.71, 15, -110.66, 8);
+		pino3 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, 88.67, 15, -118.40, 8);
+		pino4 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, 61.29, 15, -39.35, 8);
+		pino5 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, 112.34, 15, 88.70, 8);
+		pino6 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, 6.35, 15, 113.31, 8);
+		pino7 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, -118.32, 15, -11.27, 8);
+		pino8 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, -116.04, 15, -110.54, 8);
+		pino9 = new BillboardRR(L"Assets/Billboards/pino.png", L"Assets/Billboards/pinoNormal.png", d3dDevice, d3dContext, 119.94, 15, 4.18, 8);
+		arbusto = new BillboardRR(L"Assets/Billboards/arbusto.png", L"Assets/Billboards/arbustoNormal.png", d3dDevice, d3dContext, -76.86, 14, 5.92, 3);
+		arbusto2 = new BillboardRR(L"Assets/Billboards/arbusto.png", L"Assets/Billboards/arbustoNormal.png", d3dDevice, d3dContext, 35.61, 14, -115.41, 3);
+		roca = new BillboardRR(L"Assets/Billboards/stoneBill.png", L"Assets/Billboards/stoneBillNormal.png", d3dDevice, d3dContext, -57.99, 14, -27.37, 3);
+		montania1 = new BillboardRR(L"Assets/Billboards/Mountain4.png", L"Assets/Billboards/Mountain4Normal.png", d3dDevice, d3dContext, 0, -65, -149,149.5);
+		montania2 = new BillboardRR(L"Assets/Billboards/Mountain4.png", L"Assets/Billboards/Mountain4Normal.png", d3dDevice, d3dContext, 0, -65, 149, 149.5);
+		montania3 = new BillboardRR(L"Assets/Billboards/Mountain5.png", L"Assets/Billboards/Mountain5Normal.png", d3dDevice, d3dContext, -145, -65, 0, 149.5);
+		montania4 = new BillboardRR(L"Assets/Billboards/Mountain5.png", L"Assets/Billboards/Mountain5Normal.png", d3dDevice, d3dContext, 149, -65, 0, 149.5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		tanque1 = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/tanque1.obj", L"Assets/tanque1/tanque1_color.png", L"Assets/tanque1/tanque1_spec.png", -8.69, -88.22);
 		tanque1Track = new ModeloRR(d3dDevice, d3dContext, "Assets/tanque1/track.obj", L"Assets/tanque1/track_color.png", L"Assets/tanque1/track_spec.png", -8.69, -88.22);
@@ -355,6 +379,24 @@ public:
 		//TurnOnAlphaBlending();
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			79.33, 73.75, 15, 2.5, uv1, uv2, uv3, uv4, frameBillboard);
+
+		pino->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino2->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino3->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino4->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino5->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino6->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino7->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino8->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		pino9->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		arbusto->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		arbusto2->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		roca->Draw(camara->vista, camara->proyeccion, camara->posCam);
+		montania1->Draw(camara->vista, camara->proyeccion, camara->posCam, 0, 90); //Frontal
+		montania2->Draw(camara->vista, camara->proyeccion, camara->posCam, 0, -90); //Trasera 
+		montania3->Draw(camara->vista, camara->proyeccion, camara->posCam, 90, 0); //Lateral Izq
+		montania4->Draw(camara->vista, camara->proyeccion, camara->posCam, -90, 0); //Lateral Der
+
 
 		//TurnOffAlphaBlending();
 		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
